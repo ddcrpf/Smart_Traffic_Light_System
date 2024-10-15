@@ -1,0 +1,5 @@
+i is hello.txt
+this is line 2
+this is line 3
+exit
+

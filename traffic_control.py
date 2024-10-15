@@ -11,7 +11,7 @@ def control_traffic_lights(car_count, total_emission, emergency_vehicle_detected
         turn_light_red()
 
 def turn_light_green():
-    # Command to turn light green (could be GPIO, API call, etc.)
+    # Command to turn light green 
     print("Green light ON.")
 
 def turn_light_red():
