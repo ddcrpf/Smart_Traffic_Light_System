@@ -17,3 +17,10 @@ def turn_light_green():
 def turn_light_red():
     # Command to turn light red (could be GPIO, API call, etc.)
     print("Red light ON.")
+    
+    
+    
+    
+    
+    
+    extra things i am adding fror dev branch. 
