@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Control Panel</title>
+</head>
+<body>
+    <h2>Traffic Control Panel</h2>
+    <p>Logged in as: {{ session['username'] }}</p>
+
+    {% if role == 'admin' %}
+        <h3>Admin Panel</h3>
+        <p>Here you can see additional controls</p>
+    {% endif %}
+    
+    <p>Model's decision for the traffic light: {{ model_decision }}</p>
+    
+    <form method="POST">
+        <label for="traffic_light">Override Traffic Light:</label>
+        <select name="traffic_light">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Display the live camera feed -->
+    <h3>Live Traffic Feed</h3>
+    <img src="{{ url_for('video_feed') }}" width="640px" height="480px">
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
